@@ -1,16 +1,38 @@
 import tech.sahelcrea.services.Calculatrice;
 
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+
 
 public class Main {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
 
         // Créons une instance de notre classe Calculatrice
         Calculatrice calculatrice = new Calculatrice();
 
-        int resultatAddition = calculatrice.addition(10, 5);
-        System.out.println(resultatAddition);
+        // Lire les données saisies par l'utilisateur
+        BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
 
-        int resultatProduit = calculatrice.produit(9, 10);
-        System.out.println(resultatProduit);
+        System.out.println("Quelle opération voulez-vous effectué ?");
+        System.out.println("Pour addition, taper: 1");
+        System.out.println("Pour produit, taper: 2");
+        String operation = bufferedReader.readLine();
+
+        System.out.println("Entrer le premier entier !");
+        int premierEntier = Integer.parseInt(bufferedReader.readLine());
+
+        System.out.println("Entrer le second entier !");
+        int secondEntier = Integer.parseInt(bufferedReader.readLine());
+
+        if (operation.equals("1")){
+            int resultat = calculatrice.addition(premierEntier, secondEntier);
+            System.out.println("RESULTAT D'ADDITION: "+resultat);
+        }
+
+        if(operation.equals("2")){
+            int resultat = calculatrice.produit(premierEntier, secondEntier);
+            System.out.println("RESULTAT PRODUIT: "+resultat);
+        }
     }
 }
