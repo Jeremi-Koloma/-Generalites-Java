@@ -25,13 +25,12 @@ public class Main {
         System.out.println("Entrer le second entier !");
         int secondEntier = Integer.parseInt(bufferedReader.readLine());
 
-        if (operation.equals("1")){
-            int resultat = calculatrice.addition(premierEntier, secondEntier);
+        int resultat = 0;
+        if (operation.equals("1")) {
+            resultat = calculatrice.addition(premierEntier, secondEntier);
             System.out.println("RESULTAT D'ADDITION: "+resultat);
-        }
-
-        if(operation.equals("2")){
-            int resultat = calculatrice.produit(premierEntier, secondEntier);
+        }else {
+            resultat = calculatrice.produit(premierEntier, secondEntier);
             System.out.println("RESULTAT PRODUIT: "+resultat);
         }
     }
