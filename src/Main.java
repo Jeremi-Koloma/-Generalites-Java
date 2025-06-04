@@ -15,17 +15,27 @@ public class Main {
         System.out.println("Pour addition, taper: 1");
         System.out.println("Pour produit, taper: 2");
         System.out.println("Pour le modulo, taper: 3");
+        System.out.println("Pour Afficher une table de multiplication, taper: 4");
         String operation = bufferedReader.readLine();
 
         System.out.println("Entrer le premier entier !");
         int premierEntier = Integer.parseInt(bufferedReader.readLine());
 
-        System.out.println("Entrer le second entier !");
-        int secondEntier = Integer.parseInt(bufferedReader.readLine());
-
         // Créons une instance de notre classe Calculatrice
         Calculatrice calculatrice = new Calculatrice();
 
-        calculatrice.operation(premierEntier, secondEntier, operation);
+        int secondEntier = 0;
+
+        if (!operation.equals("4")) {
+            System.out.println("Entrer le second entier !");
+            secondEntier = Integer.parseInt(bufferedReader.readLine());
+
+            calculatrice.operation(premierEntier, secondEntier, operation);
+        }
+
+
+        if(operation.equals("4")) {
+            calculatrice.tableDeMultiplication(premierEntier);
+        }
     }
 }

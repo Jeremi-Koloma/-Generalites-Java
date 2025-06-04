@@ -34,4 +34,11 @@ public class Calculatrice {
         }
 
     }
+
+    // une méthode pour faire la table de multiplication
+    public void tableDeMultiplication(int multiplicateur) {
+        for (int i= 0; i < 10; i++) {
+            System.out.println(multiplicateur + " * "+ Integer.parseInt(String.valueOf(i+1)) + " = "+ Integer.parseInt(String.valueOf(i+1)) * multiplicateur);
+        }
+    }
 }
