@@ -14,6 +14,7 @@ public class Main {
         System.out.println("Quelle opération voulez-vous effectué ?");
         System.out.println("Pour addition, taper: 1");
         System.out.println("Pour produit, taper: 2");
+        System.out.println("Pour le modulo, taper: 3");
         String operation = bufferedReader.readLine();
 
         System.out.println("Entrer le premier entier !");
