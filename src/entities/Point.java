@@ -1,7 +1,7 @@
 package entities;
 
 public class Point {
-    // Encaptulation
+    // Encapstulation
     private int x;
     private int y;
 
